@@ -1,0 +1,16 @@
+{
+    "version": 3,
+    "mappings": "AKAA,AAAA,IAAI,CAAC;EACD,MAAM,EAAE,CAAC;CACZ",
+    "sources": [
+        "../sass/main.scss",
+        "../sass/_headers.scss",
+        "../sass/_input.scss",
+        "../sass/_menu_slider.scss",
+        "../sass/_modal.scss",
+        "../sass/_other.scss",
+        "../sass/_task_list.scss",
+        "../sass/_variables.scss"
+    ],
+    "names": [],
+    "file": "main.css"
+}
