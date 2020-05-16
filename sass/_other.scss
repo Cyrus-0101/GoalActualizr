@@ -6,7 +6,7 @@ body { margin: 0; }
 
 .invert {
     background-color: rgba(var(--text-color), 1);
-    color: rgba(var(bg-color), 1);
+    color: rgba(var(--bg-color), 1);
 }
 
 .icon {

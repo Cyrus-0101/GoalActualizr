@@ -1,18 +1,16 @@
 $color-transition-time: .2s;
 
 :root {
-    //Light Theme
+    // Light theme
     --bg-color: 255, 255, 255;
     --text-color: 12, 12, 12;
     --shadow-color: 0, 0, 0;
     --gradient-1: 108, 29, 103;
     --gradient-2: 100, 25, 148;
-    --side-bar-gradient-1: 255, 255, 255;
+    --sidebar-gradient-1: 255, 255, 255;
     --sidebar-gradient-2: 251, 247, 247;
-
-    --invert: 100%;
-
-    //Dark Theme
+    
+    // Dark theme
     // --bg-color: 19, 19, 19;
     // --text-color: 255, 255, 255;
     // --shadow-color: 255, 255, 255;
