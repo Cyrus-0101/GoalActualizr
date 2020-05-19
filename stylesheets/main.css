@@ -1,3 +1,153 @@
+#headers {
+  margin-top: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#headers header * {
+  font-size: 2.25rem;
+  margin: 0;
+  color: rgba(var(--text-color), 1);
+}
+
+#headers header {
+  -webkit-box-shadow: 0 3px 6px rgba(var(--text-color), 0.16), 0 3px 6px rgba(var(--text-color), 0.23);
+          box-shadow: 0 3px 6px rgba(var(--text-color), 0.16), 0 3px 6px rgba(var(--text-color), 0.23);
+  background-color: rgba(var(--bg-color), 1);
+  margin-left: 3rem;
+  padding: 5.6rem 3.2rem;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+#headers header:hover {
+  -webkit-box-shadow: 0 10px 20px rgba(var(--text-color), 0.19), 0 6px 6px rgba(var(--text-color), 0.23);
+          box-shadow: 0 10px 20px rgba(var(--text-color), 0.19), 0 6px 6px rgba(var(--text-color), 0.23);
+}
+
+#headers header div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#headers header:last-of-type {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 6rem;
+}
+
+@media (max-width: 1100px) {
+  #headers {
+    margin-top: 6rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #headers header * {
+    text-align: center;
+    font-size: 3.5rem;
+  }
+  #headers header {
+    margin: 0 4rem !important;
+    padding: 8rem 3.2rem;
+  }
+  #headers header:last-of-type {
+    margin-top: 5rem !important;
+  }
+}
+
+#input-section {
+  margin-top: 3rem;
+  margin-left: 6rem;
+}
+
+#input-section * {
+  display: block;
+}
+
+#input-section input {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  font-size: 3rem;
+  text-transform: uppercase;
+  background-color: transparent;
+  opacity: .36;
+  outline: none;
+  border: none;
+  color: rgba(var(--text-color), 1);
+}
+
+#input-section label {
+  visibility: hidden;
+  color: rgba(var(--text-color), 1);
+  font-size: 1rem;
+  opacity: .5;
+}
+
+#input-section input:focus + label {
+  visibility: visible;
+}
+
+#input-section ::-webkit-input-placeholder {
+  color: inherit;
+}
+
+#input-section :-ms-input-placeholder {
+  color: inherit;
+}
+
+#input-section ::-ms-input-placeholder {
+  color: inherit;
+}
+
+#input-section ::placeholder {
+  color: inherit;
+}
+
+@media (max-width: 1400px) {
+  #input-section input {
+    font-size: 4.2rem;
+  }
+  #input-section label {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  #input-section {
+    margin: 3rem 0 0;
+  }
+  #input-section input {
+    width: 100%;
+    margin: 10rem 0 .5rem;
+    font-size: 7.2rem;
+    text-align: center;
+  }
+  #input-section label {
+    font-size: 2.3rem;
+    text-align: center;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+}
+
 :root {
   --bg-color: 255, 255, 255;
   --text-color: 12, 12, 12;
@@ -463,6 +613,159 @@ body {
     -webkit-clip-path: polygon(0 39%, 100% 0, 100% 100%, 0 100%);
             clip-path: polygon(0 39%, 100% 0, 100% 100%, 0 100%);
   }
+}
+
+@-webkit-keyframes task-exit {
+  from {
+    -webkit-transform: perspective(400px);
+            transform: perspective(400px);
+  }
+  30% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+            transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+            transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    opacity: 0;
+  }
+}
+
+@keyframes task-exit {
+  from {
+    -webkit-transform: perspective(400px);
+            transform: perspective(400px);
+  }
+  30% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+            transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+            transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    opacity: 0;
+  }
+}
+
+.exit {
+  -webkit-animation-name: task-exit;
+          animation-name: task-exit;
+  -webkit-animation-duration: .35s;
+          animation-duration: .35s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+#task-list {
+  height: 40vh;
+  margin-left: 6rem;
+  margin-top: 3rem;
+  margin-bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-size: 16px;
+}
+
+#task-list li {
+  list-style: none;
+  font-size: 5em;
+  margin: .34em 0;
+  margin-right: 2em;
+  color: rgba(var(--text-color), 1);
+}
+
+@media (max-width: 1500px) {
+  #task-list {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 1500px) {
+  #task-list {
+    height: 54vh;
+  }
+}
+
+@media (max-width: 1300px) {
+  #task-list {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1200px) {
+  #task-list {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 1100px) {
+  #task-list {
+    font-size: 12px;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    height: auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 6rem 0 12rem;
+  }
+  #task-list li {
+    margin: 2rem 0;
+    font-size: 6.4rem;
+  }
+  #task-list li:last-of-type {
+    margin-bottom: 10rem;
+  }
+}
+
+#task-list li:first-child:nth-last-child(n+3),
+#task-list li:first-child:nth-last-child(n+3) ~ li {
+  font-size: 4.5em;
+}
+
+#task-list li:first-child:nth-last-child(n+5),
+#task-list li:first-child:nth-last-child(n+5) ~ li {
+  font-size: 3.2em;
+}
+
+#task-list li:first-child:nth-last-child(n+9),
+#task-list li:first-child:nth-last-child(n+9) ~ li {
+  font-size: 2.8em;
+}
+
+#task-list li:first-child:nth-last-child(n+12),
+#task-list li:first-child:nth-last-child(n+12) ~ li {
+  font-size: 2.4em;
+}
+
+#task-list li:first-child:nth-last-child(n+20),
+#task-list li:first-child:nth-last-child(n+20) ~ li {
+  font-size: 2.1em;
+}
+
+#task-list li:first-child:nth-last-child(n+25),
+#task-list li:first-child:nth-last-child(n+25) ~ li {
+  font-size: 2em;
+}
+
+#task-list li:first-child:nth-last-child(n+30),
+#task-list li:first-child:nth-last-child(n+30) ~ li {
+  font-size: 1.75em;
 }
 
 :root {
