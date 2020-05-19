@@ -16,6 +16,7 @@ body { margin: 0; }
     &:hover {
         transform: rotate(180deg);
     }
+    filter: brightness(100%) invert(100%);
 }
 
 header, h1, h2, h3, h4, h5, h6, input { font-weight: inherit; }
@@ -42,6 +43,7 @@ body {
     font-family: "Montserrat", sans-serif;
     background-color: rgba(var(--bg-color), 1);
     margin: 0;
+    display: none;
     cursor: default;
     min-height: 100vh;
     display: flex;
